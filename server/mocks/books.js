@@ -1,3 +1,4 @@
+/* global module, require */
 module.exports = function(app) {
   var express = require('express');
   var router = express.Router();
