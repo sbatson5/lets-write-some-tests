@@ -16,10 +16,7 @@ module.exports = function(app) {
   });
 
   router.patch('/:id', function(req, res) {
-    const id = req.id || 1;
-
-    user.data = user.data[id - 1];
-    res.send(user, 204);
+    res.send(204);
   });
 
   app.use('/api/users', router);

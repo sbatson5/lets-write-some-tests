@@ -1,0 +1,12 @@
+@import 'ember-paper';
+
+.form-input {
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.left-indent {
+  padding: 10px 16px 16px;
+}

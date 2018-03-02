@@ -11,7 +11,8 @@
       "date-of-birth": "7/30/1986",
       "email": "scott@test.com",
       "current-checking-amount": 10000,
-      "current-savings-amount": 1000
+      "current-savings-amount": 1000,
+      "notes": null
     }
   }, {
     "type": "user",
@@ -22,7 +23,8 @@
       "date-of-birth": "1/12/1975",
       "email": "john@test.com",
       "current-checking-amount": 530000,
-      "current-savings-amount": 1530000
+      "current-savings-amount": 1530000,
+      "notes": null
     }
   }, {
     "type": "user",
@@ -33,7 +35,8 @@
       "date-of-birth": "2/22/2009",
       "email": "jane@test.com",
       "current-checking-amount": 134000,
-      "current-savings-amount": 234000
+      "current-savings-amount": 234000,
+      "notes": null
     }
   }]
 }

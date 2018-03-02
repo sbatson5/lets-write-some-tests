@@ -26,6 +26,7 @@ export default Model.extend({
   email: attr('string'),
   currentSavingsAmount: attr('number'),
   currentCheckingAmount: attr('number'),
+  notes: attr('string'),
 
   currentSavingsInCents: formatMoney('currentSavingsAmount'),
   currentCheckingInCents: formatMoney('currentCheckingAmount'),

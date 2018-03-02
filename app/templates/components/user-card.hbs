@@ -1,11 +1,41 @@
-{{#if userNumber}}
-  <h3>User number {{userNumber}}</h3>
+{{#paper-card-title}}
+  {{#paper-card-title-text}}
+    {{#if userNumber}}
+      <span class="md-headline">User number {{userNumber}}</span>
+    {{/if}}
+    <span class="md-subhead">Name: {{user.fullName}}</span>
+  {{/paper-card-title-text}}
+{{/paper-card-title}}
+{{#if showInformation}}
+  {{#paper-content class="left-indent"}}
+    {{#paper-list}}
+      <div class="md-list-item-text" layout="column">
+        <h5>Email: {{user.email}}</h5>
+        <h5>DOB: {{user.dateOfBirth}}</h5>
+        <h5>Savings: {{format-currency user.currentSavingsInCents}}</h5>
+        <h5>Checking: {{format-currency user.currentCheckingInCents}}</h5>
+        {{#if user.isOverEighteen}}
+          <h4>They are old enough</h4>
+        {{/if}}
+      </div>
+    {{/paper-list}}
+    <div class="md-input-container md-block">
+      <label for="notes">Notes</label>
+      <input value={{user.notes}}
+        autofocus
+        type="text"
+        name="notes"
+        onkeydown={{action "checkForEnter"}}
+        oninput={{action (mut user.notes) value="target.value"}}
+        class="md-input form-input">
+    </div>
+  {{/paper-content}}
 {{/if}}
-<h5>Name: {{user.fullName}}</h5>
-<h5>Email: {{user.email}}</h5>
-<h5>DOB: {{user.dateOfBirth}}</h5>
-<h5>Savings: {{format-currency user.currentSavingsInCents}}</h5>
-<h5>Checking: {{format-currency user.currentCheckingInCents}}</h5>
-{{#if user.isOverEighteen}}
-  <h4>They are old enough</h4>
-{{/if}}
+{{#paper-card-actions}}
+  <button class="md-button" {{action "toggleInformation"}}>
+    {{if showInformation "Hide info" "Show info"}}
+  </button>
+  <button class="md-button" disabled={{saveDisabled}} {{action "saveRecord"}}>
+    Save
+  </button>
+{{/paper-card-actions}}
