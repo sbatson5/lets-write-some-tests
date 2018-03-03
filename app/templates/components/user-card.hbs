@@ -9,13 +9,13 @@
 {{#if showInformation}}
   {{#paper-content class="left-indent"}}
     {{#paper-list}}
-      <div class="md-list-item-text" layout="column">
+      <div class="md-list-item-text user-content" layout="column">
         <h5>Email: {{user.email}}</h5>
         <h5>DOB: {{user.dateOfBirth}}</h5>
         <h5>Savings: {{format-currency user.currentSavingsInCents}}</h5>
         <h5>Checking: {{format-currency user.currentCheckingInCents}}</h5>
         {{#if user.isOverEighteen}}
-          <h4>They are old enough</h4>
+          <h4 class="age-alert">They are old enough</h4>
         {{/if}}
       </div>
     {{/paper-list}}
