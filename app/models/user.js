@@ -1,6 +1,6 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
-import { computed, get } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { gte } from '@ember/object/computed';
 import { isPresent } from '@ember/utils';
 
